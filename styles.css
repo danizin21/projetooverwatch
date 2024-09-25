@@ -1,0 +1,144 @@
+:root {
+    --fonte1: 'Chakra Petch', sans-serif; /* Fonte padrão */
+    --coramarelo: #113961; /* Cor amarela para fundo ou outros elementos */
+    --corcinza-claro: #F2CB05; /* Cor cinza clara para textos */
+    --corverde-texto: #6e912e; /* Cor verde para textos */
+    --corbotao: #113961; /* Cor do fundo dos botões */
+    --corbotao-hover: #30475E; /* Cor do botão no hover */
+    --coritem-fundo: hsl(219, 61%, 37%); /* Cor de fundo dos itens de resultado */
+    --coritem-titulo: #5caaa0; /* Cor dos títulos dos itens de resultado */
+    --coritem-link: #3cbea2; /* Cor dos links dos itens de resultado */
+    --cordescricao-meta: #30a574; /* Cor das descrições meta dos itens */
+    --corrodape-texto: #a72f2f; /* Cor do texto do rodapé */
+}
+
+body {
+    font-family: var(--fonte1); /* Usa a variável da fonte padrão */
+    background-image: url(OIG3.jpeg); /* Coloca a imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+   
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: var(--corcinza-claro); /* Usa a cor cinza claro */
+    text-align: center; /* Alinha o texto ao centro */
+    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+}
+
+section {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+}
+
+section input {
+    width: 30rem; /* Largura dos inputs */
+    border: none; /* Remove a borda padrão */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 1.5rem; /* Borda arredondada */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+    color: var(--corverde-texto); /* Usa a cor verde para o texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: var(--corbotao); /* Usa a cor definida para o botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+section button:hover {
+    background-color: var(--corbotao-hover); /* Muda a cor do botão no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+.resultados-pesquisa {
+    width: 60rem; /* Largura máxima da caixa de resultados */
+    height: 46vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+}
+
+.item-resultado {
+    background: var(--coritem-fundo); /* Usa a cor de fundo definida */
+    opacity: 0.8; /* Transparência (80%) */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--coritem-titulo); /* Cor dos títulos dos itens de resultado */
+}
+
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: var(--coritem-link); /* Usa a cor definida para os links */
+}
+
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.descricao-meta {
+    color: var(--cordescricao-meta); /* Usa a cor definida para o texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+footer {
+    /*background-color: #917550; /* Cor de fundo do rodapé */
+    color: var(--corrodape-texto); /* Usa a cor definida para o texto do rodapé */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: absolute; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+}
