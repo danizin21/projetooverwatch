@@ -17,7 +17,7 @@ Como usar:
 Clone o repositório:
 Bash
 git clone https://github.com/seu-usuario/overwatch-heropedia.git
-Use o código com cuidado.
+
 
 Abra o arquivo index.html em um navegador web.
 Digite o nome do herói desejado no campo de pesquisa e clique no botão "Pesquisar".
